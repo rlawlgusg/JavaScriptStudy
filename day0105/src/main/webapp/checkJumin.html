@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function jumin() {
+	let jumin = document.getElementById("jumin").value;
+	
+	
+	let sum = 0;
+	let arr = [2,3,4,5,6,7,0,8,9,2,3,4,5];
+	for(let i=0;i<jumin.length-1;i++){
+		if(i == 6){
+			continue;
+		}
+		sum += Number(jumin.charAt(i))*arr[i];
+	}
+	
+	
+	sum = (sum%11);
+	sum = 11 - sum;
+	
+	if(sum == 10){
+		sum = 0;
+	}
+	if(sum == 11){
+		sum = 1;
+	}
+	
+	let last = Number(jumin.charAt(13));
+	if(last != sum){
+		alert("올바른 주민등록번호가 아닙니다.");
+		return;
+	}
+	
+	let data = jumin.charAt(7);
+	let result = "";
+	if(data == "1"){
+		result = "남자";
+	}else{
+		result = "여자";
+	}
+	
+	
+	
+	document.getElementById("result").innerHTML = result;
+	
+	}
+</script>
+</head>
+<body>
+주민번호 : <input type="text" id="jumin">
+<button onclick="jumin()">확인</button>
+<hr>
+결과 : <span id="result"></span>
+</body>
+</html>
