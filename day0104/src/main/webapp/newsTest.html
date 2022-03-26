@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	
+		let news = "항암신약 개발 기업 셀랩메드가 키메라 항원수용체 T세포(CAR-T) 치료제로 뇌종양 정복에 나선다.";
+		
+		window.onload = ()=>{
+			let n = 1;
+			setInterval(()=>{
+				let data = news.substr(0,n++);		
+				document.getElementById("result").innerHTML = data;
+				if(n >= news.length){
+					n =1;
+				}
+			},200)
+		}
+		
+		
+
+	
+</script>
+</head>
+<body>
+<div id="result"></div>
+</body>
+</html>

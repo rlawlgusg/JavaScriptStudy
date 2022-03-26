@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	
+		let news = ["항암신약 개발 기업 셀랩메드가 키메라 항원수용체 T세포(CAR-T) 치료제로 뇌종양 정복에 나선다.",
+			"4일 0시 기준 신종 코로나바이러스 감염증(코로나19) 신규 확진자가 3024명 발생했다.",
+			"무아지경으로 춤을 추다 손님이 왔음을 알아채고 당황하는 카페 아르바이트생의 영상이 조회수 3500만회를 기록하며 뜨거운 관심을 받았다.",
+			"프랑스에서 돌연변이 46개를 가진 코로나19 변이 바이러스가 발견됐지만 전문가들은 아직 신종 변이가 오미크론과 같은 파급력을 가지게 될지는 예측하기 어렵다는 의견을 내놓고 있다.",
+			"대장주애플의 장중 시가총액이 세계 최초로 3조 달러를 돌파하는가 하면, 테슬라는 주가가 13% 넘게 급등했습니다."];
+		
+		window.onload = ()=>{
+			let n = 1;
+			let i = 0;
+			setInterval(()=>{
+				let data = news[i].substr(0,n++);		
+				document.getElementById("result").innerHTML = data;
+				
+				if(n>=news[i].length){
+					n=1;
+					i++;
+				}
+				if(i>=news.length){
+					i=0;
+					n=1;
+				}
+				
+			},50)
+		}
+		
+		
+
+	
+</script>
+</head>
+<body>
+<div id="result"></div>
+</body>
+</html>

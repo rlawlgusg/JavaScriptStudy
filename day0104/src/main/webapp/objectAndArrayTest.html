@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	let arr = ["홍길동",20,"서울"];
+	let member = {
+			name:"홍길동",
+			age:20,
+			addr:"서울"
+	}
+	
+	console.log(arr);
+	console.log(member);
+	
+	for(let i in arr){
+		console.log(i+","+arr[i]);
+	}
+	
+	for(let i in member){
+		console.log(i+","+member[i]);
+	}
+	//객체는 for of 반복문을 사용할 수 없음
+	for(let i of arr){
+		console.log(i);
+	}
+	
+	for(let i of member){
+		console.log(i);
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>
