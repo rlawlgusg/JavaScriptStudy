@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#btn").click(function(){
+			$.ajax({url:"Hello",success:function(r){
+				$("#result").html(r);
+			}});
+		});
+	});
+</script>
+</head>
+<body>
+	<input type="text">
+	<br>
+	결과 : <span id="result"></span>
+	<hr>
+	<button id="btn">Ajax통신</button>
+</body>
+</html>
