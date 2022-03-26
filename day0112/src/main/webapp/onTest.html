@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	div{
+		margin: 10px;
+		padding: 10px;
+		border: solid 3px black;
+		border-radius: 10px;
+	}
+</style>
+<script type="text/javascript"	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("div").on("click",function(){
+			$(this).clone().appendTo("body");
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<h1>[속보]'먹는 코로나 치료제' 2만명분 내일 도착... 월말 1만명분 추가 도입</h1>
+		<p>중앙재난안전대책본부는 오늘(12일) 코로나19 먹는 치료제의 도입과 사용방안 등을 논의했다고 밝혔습니다. </p>
+	</div>
+</body>
+</html>

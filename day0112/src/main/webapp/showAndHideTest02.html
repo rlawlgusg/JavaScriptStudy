@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("p").hide();
+		
+		$("h3").click(function(){
+			$("p").hide();
+			$(this).next().show(1000);
+		});
+	
+	});
+</script>
+</head>
+<body>
+	<h1>OPEN & CLOSE</h1>
+	<div>
+		<h3>스타벅스 기프티콘, 가격 인상에 '카톡 선물하기' 랭킹 싹쓸이</h3>
+		<p>스타벅스가 내일(13일) 음료 가격 인상을 예고하면서 스타벅스 기프티콘 사재기 열풍이 불고 있습니다.</p>
+	</div>
+	<div>
+		<h3>[속보]문 대통령 "50대 이하 3차 접종률이 오미크론 피해 정도 좌우하는 관건"</h3>
+		<p>문재인 대통령이 사흘째 코로나19 백신 3차 접종(부스터샷)의 중요성을 강조했다.</p>
+	</div>
+
+</body>
+</html>
