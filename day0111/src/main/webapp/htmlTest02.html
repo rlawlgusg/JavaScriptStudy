@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		
+		setTimeout(function(){
+			$("h1").html("★"+$("h1").html()+"★");
+			},3000);
+		//한개일때는 이 방법이 가능....
+		//html이 한개만 읽어오기 때문에 
+		//그러나 여러개일때는 불가능
+		
+	});
+</script>
+</head>
+<body>
+	<h1>홍길동</h1>
+	<h1>이순신</h1>
+	<h1>유관순</h1>
+</body>
+</html>
