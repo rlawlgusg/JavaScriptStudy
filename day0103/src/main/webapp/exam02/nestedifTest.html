@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function pro() {
+		let num1 = Number(document.getElementById("num1").value);
+		let num2 = Number(document.getElementById("num2").value);
+		let num3 = Number(document.getElementById("num3").value);
+		let result = document.getElementById("result");
+		if(num1 > num2){
+			if(num1 >num3){
+				result.innerHTML = num1;
+			}else{
+				result.innerHTML = num3;	
+			}
+		}else{
+			if(num2 > num3){
+				result.innerHTML = num2;
+			}else{
+				result.innerHTML = num3;
+			}	
+		}
+	
+	}
+
+</script>
+</head>
+<body>
+수1 : <input type="text" id="num1">
+수2 : <input type="text" id="num2">
+수3 : <input type="text" id="num3">
+<button onclick="pro()">확인</button>
+<span id="result"></span>
+</body>
+</html>

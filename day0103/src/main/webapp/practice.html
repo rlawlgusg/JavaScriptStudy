@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function pro() {
+		let num = Number(document.getElementById("num").value);
+		let kor;
+		if(num/10!=0){
+			switch (num/10) {
+			case 1:kor="십";break;
+				
+			case 2:kor="이십";break;
+			
+			case 3:kor="삼십";break;
+			
+			case 4:kor="사십";break;
+			
+			case 5:kor="오십";break;
+			
+			case 6:kor="육십";break;
+			
+			case 7:kor="칠십";break;
+			
+			case 8:kor="팔십";break;
+			
+			case 9:kor="구십";break;		
+			}
+			
+		}
+		
+		document.getElementById("kor").innerHTML = kor;
+	
+	}
+	
+
+</script>
+</head>
+<body>
+수 : <input type="text" id="num">
+<button onclick="pro()">변환</button>
+<span id="kor"></span> 
+</body>
+</html>

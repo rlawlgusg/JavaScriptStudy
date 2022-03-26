@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function pro() {
+		let score = Number(document.getElementById("score").value);
+		let grade;
+		if(score>=90){
+			grade = "수";
+		}else if(score>=80){
+			grade = "우";
+		}else if(score>=70){
+			grade = "미";
+		}else if(score>=60){
+			grade = "양";
+		}else{
+			grade = "가";
+		}
+		document.getElementById("grade").innerHTML = grade;
+	}
+</script>
+</head>
+<body>
+점수 : <input type="text" id="score">
+<button onclick="pro()">점수</button>
+<span id="grade"></span>
+</body>
+</html>
