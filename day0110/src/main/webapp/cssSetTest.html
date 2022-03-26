@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	span{
+		display: inline-block;
+		width: 30px;
+		height: 20px;
+		margin: 20px;
+	}
+	
+	body{
+		padding: 100px;
+	}
+</style>
+<script type="text/javascript"	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("span").click(function(){
+		$("div").css("color",$(this).css("background-color"));
+	});
+	
+	/*
+	let span_list = $("span");
+	$.each(span_list,function(index,item){
+		$(item).click(function(){
+			let color = $(this).css("background-color");
+			$("div").css("color",color);
+		});
+	});*/
+});
+</script>
+</head>
+<body>
+	<div>
+	국민의힘 윤석열 대선 후보가 전기차도 주유소에서 충전할 수 있게 하겠다고 공약했습니다.
+
+윤 후보는 오늘(10일) ‘석열씨의 심쿵약속’ 보도자료를 통해 “기존 주유소와 LPG 충전소를 전기차 충전이 가능한 친환경 에너지 거점으로 만들겠다”며 이같이 밝혔습니다.
+
+윤석열 후보는 현 정부에서도 전기차 인프라 확충을 시도하고 있지만 관련법상 주유소 내 ‘연료전지’는 설치가 불가능한 상황이라며, 충전 설비 관련 규제를 완화하겠다고 설명했습니다.
+
+윤 후보는 전기차 보급이 빠른 속도로 늘고 있다며 “대한민국이 전기차 시대를 선도하는 나라가 될 수 있도록 규제를 해소하고, 관련 산업을 진흥해 나갈 계획”이라고 강조했습니다.
+	
+	
+	</div>
+	<hr>
+	<span style="background-color:red"></span>
+	<span style="background-color:green"></span>
+	<span style="background-color:blue"></span>
+	<span style="background-color:pink"></span>
+	<span style="background-color:orange"></span>
+</body>
+</html>

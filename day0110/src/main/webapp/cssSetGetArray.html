@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#btnSet").click(function(){
+			$("h1").css("color","black");	
+			//선택자로 선택한 결과가 배열일때에
+			//설정할때는 모두 설정됌
+		});
+		$("#btnGet").click(function(){
+			let color = $("h1").css("color");
+			alert(color);
+			//선택자로 선택한 결과가 배열일때에
+			//읽어올때는 맨첫번째 노드의 값을 읽어옴
+			//만약 모두 읽어와야 하는 상황이라면
+			//반복문을 이용함
+		});		
+	});
+</script>
+</head>
+<body>
+	<h1 style="color:red">홍길동</h1>
+	<h1 style="color:blue">이순신</h1>
+	<h1 style="color:orange">유관순</h1>
+	<h1 style="color:green">문재인</h1>
+	<h1 style="color:pink">김유신</h1>
+	<button id="btnSet">css설정하기</button>
+	<button id="btnGet">css읽어오기</button>
+</body>
+</html>
