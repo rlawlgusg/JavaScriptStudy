@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		let arr1 = ["홍길동","이순신","유관순"]; 
+		//문자열 String 배열 
+		/*
+		$.each(arr1,function(index,item){
+			alert(item);
+		});
+		*/
+		let arr2 = [
+			{name:"사과",price:2000},
+			{name:"포도",price:3000},
+			{name:"수박",price:8000}		
+		]; 
+		//객체 배열
+		$.each(arr2,function(index,item){
+			alert(itme.name);
+		});
+		
+		
+		let arr3 = $("input"); 	
+		//input태그들의 배열
+		/*
+		$.each(arr3,function(index, item){
+			let data = $(item).val();
+			alert(data);
+		});
+		*/
+		//arr3에 있는만큼 다음의 함수를 실행해라..라는뜻
+		
+		let arr4 = $("h2"); 	
+		//h2태그들의 배열
+		/*
+		$.each(arr4,function(index,item){
+			let data = $(item).html();
+			alert(data);
+		});
+		*/
+	});
+</script>
+</head>
+<body>
+<input type="text" value="10">
+<input type="text" value="20">
+<input type="text" value="30">
+<hr>
+<h2>짬뽕</h2>
+<h2>짜장면</h2>
+<h2>탕수육</h2>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+/*
+$(function(){
+	$("button").click(function(){
+		var arr = $("input[type=text]");
+		var total = Number($("#kor").val())+Number($("#eng").val())+Number($("#math").val());
+		var avg = total/3;
+		alert(total);
+		alert(avg);
+		
+		var tr = $("<tr></tr>");
+		var td1 = "";
+		var td2 = 0;
+		var td3 = 0;
+		$.each(arr,function(index,item){
+			
+			var str = $(this).val();
+			td1 = $("<td></td>").html(str)
+			
+			$(tr).append(td1);
+			
+		});
+		
+		td2 = $("<td></td>").html(total);
+		td3 = $("<td></td>").html(avg);
+		$(tr).append(td2);
+		$(tr).append(td3);
+		$("#list").append(tr);
+		$(arr).val("");
+	});
+});
+*/
+
+$(function(){
+	$("button").click(function(){
+		var arr = $("input[type=text]");	
+		var tr = $("<tr></tr>");
+		var tot = 0;
+		$.each(arr,function(index,item){
+			let data = $(item).val();
+			let td = $("<td></td>").html(data);
+			$(tr).append(td);
+			if(index != 0){
+				tot += Number(data);
+			}
+		});
+		
+		avg = tot/3;
+		$(tr).append($("<td></td>").html(tot));
+		$(tr).append($("<td></td>").html(avg));
+		$("table").append(tr);
+		$(arr).val("");
+	});
+});
+
+
+
+
+</script>
+
+</head>
+<body>
+	<table border="1" width="80%" id="list">
+		<tr>
+			<th>이름</th>
+			<th>국어</th>
+			<th>영어</th>
+			<th>수학</th>
+			<th>총점</th>
+			<th>평균</th>
+		</tr>
+	</table>
+	<hr>
+	이름 : <input type="text"><br>
+	국어 : <input type="text" id="kor"><br>
+	영어 : <input type="text" id="eng"><br>
+	수학 : <input type="text" id="math"><br>
+	<button>등록</button>
+</body>
+</html>

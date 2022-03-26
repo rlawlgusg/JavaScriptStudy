@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		let arr = ["짜장면","햄버거","짬뽕","햄버거","청국장","된장찌개"];
+	
+		$("button").click(function(){
+			
+			$.each(arr,function(index,item){
+				$("ul").append( $("<li></li>").html(item));
+			
+			});	
+		});
+	
+	
+	
+	});
+	
+	
+</script>
+</head>
+<body>
+	<ul></ul>
+	<button>읽어오기</button>
+</body>
+</html>

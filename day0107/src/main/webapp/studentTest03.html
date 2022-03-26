@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.active{
+		background-color: pink;
+	}
+	
+	.high_light{
+		background-color: yellow;
+	}
+</style>
+<script type="text/javascript"	src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var arr = $("input[type=text]");
+	var td_list;
+	var sel_tr; // 눌러진 tr을 담아줄 변수
+	$("#btnAdd").click(function(){		
+		var tr = $("<tr></tr>");
+		var tot = 0;
+		$.each(arr,function(index,item){
+			let data = $(item).val();
+			let td = $("<td></td>").html(data);
+			$(tr).append(td);
+			if(index != 0){
+				tot += Number(data);
+			}
+		});
+		
+		avg = tot/3;
+		$(tr).append($("<td></td>").html(tot));
+		$(tr).append($("<td></td>").html(avg));
+		$("table").append(tr);
+		$(arr).val("");
+	});
+	
+	
+	$(document).on("click","tr", function(){
+		sel_tr = this;//눌러진 tr을 sel_tr에 저장
+		td_list = $(this).find("td");
+		//alert($(td_list[0]).html());
+		
+		$("tr").removeClass()
+		$(this).addClass("active");
+		
+		$.each(arr,function(index,item){
+			$(item).val($( td_list[index]).html() );
+		});
+
+	});
+	
+	$("#btnUpdate").click(function(){
+		var tot = 0;
+		$.each(arr, function(index, item){
+			$(td_list[index]).html( $(item).val() );
+			if(index != 0){
+				tot += Number($(item).val());
+			}
+		});
+		avg = tot/3;
+		$(td_list[4]).html(tot);
+		$(td_list[5]).html(avg);
+	});
+	
+	$("#btnDelete").click(function(){
+		$(sel_tr).remove();		
+		$(arr).val("");
+	});
+	
+	$(document).on("mouseover","tr",function(){
+		$(this).addClass("high_light");		
+	});
+	
+	$(document).on("mouseleave","tr",function(){
+		$(this).removeClass("high_light");	
+	});
+	
+	
+	
+	
+});
+
+
+
+
+</script>
+
+</head>
+<body>
+	<table border="1" width="80%" id="list">
+		<tr>
+			<th>이름</th>
+			<th>국어</th>
+			<th>영어</th>
+			<th>수학</th>
+			<th>총점</th>
+			<th>평균</th>
+		</tr>
+	</table>
+	<hr>
+	이름 : <input type="text" id="name"><br>
+	국어 : <input type="text" id="kor"><br>
+	영어 : <input type="text" id="eng"><br>
+	수학 : <input type="text" id="math"><br>
+	<button id="btnAdd">등록</button>
+	<button id="btnUpdate">수정</button>
+	<button id="btnDelete">삭제</button>
+</body>
+</html>

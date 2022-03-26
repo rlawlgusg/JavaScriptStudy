@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.high_light{
+		background-color: gray;
+	}
+	
+	.active{
+		background-color: pink;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		
+		let selected_li;
+		
+		$("#btnAdd").click(function(){
+			let data = $("#data").val();
+			let li = $("<li></li>").html(data);
+			$("#list").append(li);
+			$("#data").val("");
+		});
+		
+		$(document).on("mouseover", "li", function(){
+			$(this).addClass('high_light');
+		});
+		
+		$(document).on("mouseleave", "li", function(){
+			$(this).removeClass('high_light');
+		});
+		
+		$(document).on("click", "li", function(){
+			selected_li = this;
+			$("li").removeClass("active");
+			$(this).addClass("active");
+			
+			let str = $(this).html();
+			$(data).val(  str  );
+		});
+		
+		$("#data").keypress(function(e){
+			let code = e.keyCode;
+			if(code == 13){
+				$(selected_li).html(  $("#data").val()  );
+			}
+		});
+		
+		$(document).on("dblclick","li",function(){
+			$(this).remove();	
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<h2>직장인이 선호하는 점심메뉴</h2>
+	<hr>
+	<ul id="list"></ul>
+	<hr>
+	입력하세요==> 
+	<input type="text" id="data" >
+	<button id="btnAdd">추가</button>
+	
+	<!-- 
+		1. "추가"버튼을 누르면 입력내용을 리스트에 추가합니다.
+		2. 리스트에 마우스가 올라가면 하이라이트를 설정합니다.
+		3. 리스트를 누르면 선택한행의 내용을 입력상자에 출력하고 
+			다른 색상으로 배경색을 설정합니다.
+			
+			완성하면 "3"
+	 -->
+</body>
+</html>
+
+
+
+
+
+
+
+
